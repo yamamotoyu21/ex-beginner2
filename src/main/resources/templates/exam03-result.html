@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = "ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset = "UTF-8">
+	<title>Exam03-result</title>
+</head>
+<body>
+	<h2>合計金額</h2>
+	<p></p>
+	■税抜き金額<br>
+	<span th:text="${#numbers.formatInteger(application.totalAmount,1,'COMMA')}">税抜き金額</span>円<br>
+	<p></p>
+	■税込み金額<br>
+	<span th:text="${#numbers.formatInteger(application.taxIncludedAmount,1, 'COMMA')}">税込金額</span>円<br>
+	
+</body>
+</html>
